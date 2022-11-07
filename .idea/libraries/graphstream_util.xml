@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="graphstream.util" type="repository">
+    <properties maven-id="org.graphstream:util:1.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/graphstream/util/1.0/util-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
