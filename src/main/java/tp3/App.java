@@ -164,16 +164,20 @@ public class App {
         }
 
 
-    public static void Dijkstragraphstream(Graph graph, Node Source){
+    public static void Dijkstragraphstream(Graph graph, Node Source ){
        System.out.println("========Dijkstra graphstream =======");
 
-       Dijkstra Dijkstragraphstream= new Dijkstra(Dijkstra.Element.NODE,null,"distance");
+     //  Dijkstra Dijkstragraphstream= new Dijkstra(Dijkstra.Element.EDGE,"null");
+        Dijkstra Dijkstragraphstream = new Dijkstra(Dijkstra.Element.EDGE, "result", "poids");
         Dijkstragraphstream.init(graph);
         Dijkstragraphstream.setSource(Source);
         Dijkstragraphstream.compute();
+        System.out.println("Le noeud source est : " + Source.getIndex());
         for (Node node : graph) {
-            System.out.printf("%s->%s:%10.2f%n", Dijkstragraphstream.getSource(), node,
-                    Dijkstragraphstream.getPathLength(node));
+          //  System.out.printf("%s->%s:%10.2f%n", Dijkstragraphstream.getSource(), node,
+            //        Dijkstragraphstream.getPathLength(node));
+            System.out.printf(" Le plus court chemin entre %s et %s ==> %6.2f%n", Dijkstragraphstream.getSource(), node, Dijkstragraphstream.getPathLength(node));
+
 
 
         }
