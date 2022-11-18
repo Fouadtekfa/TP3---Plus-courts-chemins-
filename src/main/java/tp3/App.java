@@ -139,6 +139,7 @@ public class App {
     //dans cette methode on vas faire appelle a nous méthodes pour implémanter l'algorithme
     public static void DijkstraNaive(Graph graphe, Node source) {
         // initialisation
+        System.out.println("========Dijkstra Naive =======");
         init(graphe,source);
          // fille.empty() pour vérifie si la file est vide
         while(!file.isEmpty()){
@@ -159,7 +160,12 @@ public class App {
         System.out.print("Noeud de source " +source.getId()+"\n");
 
         for (Node node : graph) {
-            System.out.print("la distance entre  le Noeud  " + source  + " et " + node + " :  ====> "+  node.getAttribute("distance") + "\n" );
+
+            if ((int) node.getAttribute("distance") ==  Integer.MAX_VALUE) {
+                System.out.print("la distance entre  le Noeud  " + source + " et " + node + " :  ====> " + "Infinity" + "\n");
+            }else {
+                System.out.print("la distance entre  le Noeud  " + source + " et " + node + " :  ====> " + node.getAttribute("distance") + "\n");
+            }
             }
         }
 
