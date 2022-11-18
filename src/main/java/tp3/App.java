@@ -7,6 +7,7 @@ import org.graphstream.graph.Node;
 import org.graphstream.graph.implementations.DefaultGraph;
 import org.graphstream.graph.implementations.SingleGraph;
 import org.omg.CORBA.SystemException;
+import org.graphstream.algorithm.*;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -85,7 +86,7 @@ public class App {
        for (Node n : grahe) {
            if (!n.equals(source)) {
                //voisin.dist ← ∞
-               // pour chaque noeud different de noeud de de source on instailise a l'infini
+               // pour chaque noeud different de noeud de source on instailise a l'infini
                n.setAttribute("distance", Integer.MAX_VALUE);
            }
        }
@@ -151,10 +152,11 @@ public class App {
             }
 
         }
+        affichageDistance(graphe,source);
     }
 // affichage des distance entre la source les autres noeud pour tester mon coode
     public static void affichageDistance(Graph graph , Node source){
-        System.out.print("Noeud de source " +source.getId()+"/n");
+        System.out.print("Noeud de source " +source.getId()+"\n");
 
         for (Node node : graph) {
             System.out.print("la distance entre  le Noeud  " + source  + " et " + node + " :  ====> "+  node.getAttribute("distance") + "\n" );
@@ -162,6 +164,22 @@ public class App {
         }
 
 
+    public static void Dijkstragraphstream(Graph graph, Node Source){
+       System.out.println("========Dijkstra graphstream =======");
+
+       Dijkstra Dijkstragraphstream= new Dijkstra(Dijkstra.Element.NODE,null,"distance");
+        Dijkstragraphstream.init(graph);
+        Dijkstragraphstream.setSource(Source);
+        Dijkstragraphstream.compute();
+        for (Node node : graph) {
+            System.out.printf("%s->%s:%10.2f%n", Dijkstragraphstream.getSource(), node,
+                    Dijkstragraphstream.getPathLength(node));
+
+
+        }
+
+
+    }
 
     public static void main( String[] args )
     {
@@ -169,8 +187,9 @@ public class App {
         Graph graph1 = new DefaultGraph("Random");
         GeneratorGraph(graph1,4,2,false,15);
         Graph graph2 = new SingleGraph("Random");
-        DijkstraNaive(graph1,graph1.getNode(1));
-        affichageDistance(graph1 ,graph1.getNode(1));
+        DijkstraNaive(graph1,graph1.getNode(0));
+       // affichageDistance(graph1 ,graph1.getNode(0));
+        Dijkstragraphstream(graph1,graph1.getNode(0));
         //GeneratorGraph(graph2,150,2);
         //Graph graph3 = new SingleGraph("Random");
         //GeneratorGraph(graph3,400,3);
