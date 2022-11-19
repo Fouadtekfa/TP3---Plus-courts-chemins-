@@ -20,7 +20,7 @@ public class App {
 
     /**
      *Générateur d'un graphe aléatoire
-      * @param graph le graphe qui sera attribué au générateur
+     * @param graph le graphe qui sera attribué au générateur
      * @param NbNoeuds nombre de noeuds
      * @param averageDegree le degré moyen du graphe
      * @param directed graphe oriente ou pas
@@ -49,53 +49,53 @@ public class App {
             //style CSS pour les arêtes
             e.setAttribute("ui.style", "text-size: 20px;");
         });
-         //affichage des id des noeuds avec le style CSS
+        //affichage des id des noeuds avec le style CSS
         graph.nodes().forEach(n -> {
             n.setAttribute("label", n.getId());
             n.setAttribute("ui.style","fill-color:Yellow; size:22; text-size:18px; ");
         });
         if (display==true){
-        graph.display();}
-        System.out.println("le graphe "+graph.getId()+" est généré");
+            graph.display();}
+        //System.out.println("le graphe "+graph.getId()+" est généré");
 
     }
 
-   /* public static void init( Graph graphe, Node source) {
-        source.setAttribute("d", 0);
-        for (Node n : graphe) {
-            //v .dist ← ∞ mettre a la infinie
-                n.setAttribute("distance",  Integer.MAX_VALUE);
-        }
-        //ajout de noode sde source a la fille
-        file.put(source, (int) source.getAttribute("distance"));
-        System.out.println(file.toString());
+    /* public static void init( Graph graphe, Node source) {
+         source.setAttribute("d", 0);
+         for (Node n : graphe) {
+             //v .dist ← ∞ mettre a la infinie
+                 n.setAttribute("distance",  Integer.MAX_VALUE);
+         }
+         //ajout de noode sde source a la fille
+         file.put(source, (int) source.getAttribute("distance"));
+         System.out.println(file.toString());
 
-    }
-*/
-   //dans cette parti on vas implémenter l'algorithme de Dijkstra vu en cours étape par étape
+     }
+ */
+    //dans cette parti on vas implémenter l'algorithme de Dijkstra vu en cours étape par étape
     //utiliser hashmap pour pouvoir stocker chaque node avec sa priorité
-   private static  HashMap<Node, Integer> file = new HashMap<Node, Integer>();
+    private static  HashMap<Node, Integer> file = new HashMap<Node, Integer>();
     //
-   public static void init(Graph grahe , Node source) {
+    public static void init(Graph grahe , Node source) {
 
-       //s.dist ← 0 source.distance <- 0
-       source.setAttribute("distance", 0);
+        //s.dist ← 0 source.distance <- 0
+        source.setAttribute("distance", 0);
 
-       for (Node n : grahe) {
-           if (!n.equals(source)) {
-               //voisin.dist ← ∞
-               // pour chaque noeud different de noeud source on instailise a l'infini
-               n.setAttribute("distance", Integer.MAX_VALUE);
-           }
-       }
-       // f.add(s, 0) On ajoute le paramètre de noeud de source a la fille
-       file.put(source, (int) source.getAttribute("distance"));
-   }
+        for (Node n : grahe) {
+            if (!n.equals(source)) {
+                //voisin.dist ← ∞
+                // pour chaque noeud different de noeud source on instailise a l'infini
+                n.setAttribute("distance", Integer.MAX_VALUE);
+            }
+        }
+        // f.add(s, 0) On ajoute le paramètre de noeud de source a la fille
+        file.put(source, (int) source.getAttribute("distance"));
+    }
 
-   // u ← f.extractMin()
-   //récupère l’élément de priorité minimum
+    // u ← f.extractMin()
+    //récupère l’élément de priorité minimum
     public static   Node extractMin() {
-       //le noeud minimale
+        //le noeud minimale
         Node noeudminimale = file.entrySet().iterator().next().getKey();
         // la distance minimale
         int distanceMinimale = file.entrySet().iterator().next().getValue();
@@ -107,10 +107,10 @@ public class App {
                 noeudminimale = it.getKey();
             }
         }
-        System.out.println(file.toString());
-        System.out.println("=============1================");
+      //  System.out.println(file.toString());
+     //   System.out.println("=============1================");
         file.remove(noeudminimale, distanceMinimale);
-        System.out.println(file.toString());
+      //  System.out.println(file.toString());
         return noeudminimale;
     }
 
@@ -131,18 +131,18 @@ public class App {
             file.put(voisin, sum);
         }
 
-        System.out.println("Mis a jours ");
-        System.out.println(file.toString());
+       // System.out.println("Mis a jours ");
+      //  System.out.println(file.toString());
     }
     //dans cette methode on va faire appelle à nos méthodes pour implémanter l'algorithme
     public static void DijkstraNaive(Graph graphe, Node source) {
         // initialisation
-        System.out.println("========Dijkstra Naive =======");
+      //  System.out.println("========Dijkstra Naive =======");
         double  temps_execution =0;
-        float temps_debut = System.nanoTime();
+        double temps_debut = System.nanoTime();
         init(graphe,source);
 
-         // fille.empty() pour vérifier si la file est vide
+        // fille.empty() pour vérifier si la file est vide
         while(!file.isEmpty()){
             //récupère l’élément de priorité minimum
             Node u = extractMin();
@@ -154,12 +154,12 @@ public class App {
             }
 
         }
-        float temps_fin = System.nanoTime();
+        double temps_fin = System.nanoTime();
         temps_execution=(temps_fin-temps_debut)/1000000;
-        System.out.printf("temps1= "+temps_execution +"ms");
-       // affichageDistance(graphe,source);
+      //  System.out.printf("temps1= "+temps_execution +"ms");
+
     }
-// affichage des distance entre la source les autres noeud pour tester mon coode
+    // affichage des distance entre la source les autres noeud pour tester mon coode
     public static void affichageDistance(Graph graph , Node source){
         System.out.print("Noeud de source " +source.getId()+"\n");
         System.out.println("========Dijkstra Naive =======");
@@ -170,43 +170,80 @@ public class App {
             }else {
                 System.out.print("la distance entre  le Noeud  " + source + " et " + node + " :  ====> " + node.getAttribute("distance") + "\n");
             }
-            }
         }
+    }
 
 
-    public static double Dijkstragraphstream(Graph graph, Node Source ){
-       System.out.println("========Dijkstra graphstream =======");
-       double  temps_execution =0;
-       //Dijkstra Dijkstragraphstream= new Dijkstra(Dijkstra.Element.EDGE,"null");
+    public static double Dijkstragraphstream(Graph graph, Node Source,Boolean afficher ){
+        // System.out.println("========Dijkstra graphstream =======");
+        double  temps_execution =0;
+        //Dijkstra Dijkstragraphstream= new Dijkstra(Dijkstra.Element.EDGE,"null");
         Dijkstra Dijkstragraphstream = new Dijkstra(Dijkstra.Element.EDGE, "result", "poids");
-        float temps_debut = System.nanoTime();
+        double temps_debut = System.nanoTime();
         Dijkstragraphstream.init(graph);
         Dijkstragraphstream.setSource(Source);
-      //  float temps_debut = System.nanoTime();
+        //  float temps_debut = System.nanoTime();
         Dijkstragraphstream.compute();
-        float temps_fin = System.nanoTime();
-         float temps=(temps_fin-temps_debut)/1000000;
-        System.out.println("Le noeud source est : " + Source.getIndex());
-        /*for (Node node : graph) {
+        double temps_fin = System.nanoTime();
+        temps_execution=(temps_fin-temps_debut)/1000000;
+       // System.out.println("Le noeud source est : " + Source.getIndex());
+       if(afficher==true){
+        for (Node node : graph) {
           //  System.out.printf("%s->%s:%10.2f%n", Dijkstragraphstream.getSource(), node,
             //        Dijkstragraphstream.getPathLength(node));
             System.out.printf(" Le plus court chemin entre %s et %s ==> %6.2f%n", Dijkstragraphstream.getSource(), node, Dijkstragraphstream.getPathLength(node));
 
-        }*/
-        System.out.printf("temps "+temps +"ms");
+        }
+       }
+      //  System.out.printf(temps_execution +"ms");
         return temps_execution;
 
     }
+    //calculer le temps d'execusion en ms de la version Naive Dijkstra
+    private static double TimeNaiveDijkstra(Graph g, Node s,Boolean afficher) {
+        //Instanciation
+        App VersionNaiveDijkstra = new App();
+        //Lancement du compteur
+        double debut = System.nanoTime();
+        //Appel de la méthode contenant l'algorithme de Dijkestra version naive
+        VersionNaiveDijkstra.DijkstraNaive(g, s);
+        //Stopper le compteur à la fin
+        double fin = System.nanoTime();
+        //Calcul du temps d'execusion en ms
+        double temps = (fin - debut)/1000000;
+        //Retourner le temps d'execusion de l'algorithme
+        if(afficher==true) {
+            affichageDistance(g, s);
+        }
+        return temps ;
+
+    }
+
 
     public static void main( String[] args )
     {
         System.setProperty("org.graphstream.ui", "swing");
         Graph graph1 = new DefaultGraph("Random");
-        GeneratorGraph(graph1,10,2,true,15,true);
-        Graph graph2 = new SingleGraph("Random");
+        GeneratorGraph(graph1,10,2,false,15,true);
+        Graph graph2 = graph1;
+        Graph graph3 = graph1;
         DijkstraNaive(graph1,graph1.getNode(0));
-       // affichageDistance(graph1 ,graph1.getNode(0));
-       System.out.println( Dijkstragraphstream(graph1,graph1.getNode(0)));
+        System.out.println("le plus court chemins entre le Node 0 et les autres ");
+        System.out.println(" de temps d'exécution  =====>"+TimeNaiveDijkstra(graph1,graph1.getNode(0),true));
+        System.out.println("========Dijkstra graphstream===============");
+        System.out.println("de temps d'exécution "+ Dijkstragraphstream(graph1,graph1.getNode(0),true) +   "\n");
+
+        int i =0;
+        while (  i <= 10000 ){
+
+            Graph grapht = new SingleGraph("CPP");
+            GeneratorGraph(grapht,i,10,false,15,false);
+            System.out.println(  "\n"+"NaiveDijkstra" +i+"=====>"+TimeNaiveDijkstra(grapht,grapht.getNode(0),false)) ;
+            System.out.println(  "\n"+"Dijkstra graphstream de " +i+"=====>"+Dijkstragraphstream(grapht,grapht.getNode(0),false)) ;
+
+            i=i+50;
+        }
+
         //GeneratorGraph(graph2,150,2);
         //Graph graph3 = new SingleGraph("Random");
         //GeneratorGraph(graph3,400,3);

@@ -1,0 +1,806 @@
+
+
+Dijkstra graphstream de 0=====>0.439121
+
+
+
+Dijkstra graphstream de 50=====>1.545773
+
+
+
+Dijkstra graphstream de 100=====>2.669804
+
+
+
+Dijkstra graphstream de 150=====>2.213254
+
+
+
+Dijkstra graphstream de 200=====>3.301001
+
+
+
+Dijkstra graphstream de 250=====>2.725808
+
+
+
+Dijkstra graphstream de 300=====>1.104823
+
+
+
+Dijkstra graphstream de 350=====>1.193257
+
+
+
+Dijkstra graphstream de 400=====>1.231001
+
+
+
+Dijkstra graphstream de 450=====>2.368827
+
+
+
+Dijkstra graphstream de 500=====>1.510673
+
+
+
+Dijkstra graphstream de 550=====>1.426515
+
+
+
+Dijkstra graphstream de 600=====>1.599324
+
+
+
+Dijkstra graphstream de 650=====>2.459392
+
+
+
+Dijkstra graphstream de 700=====>1.464143
+
+
+
+Dijkstra graphstream de 750=====>1.661299
+
+
+
+Dijkstra graphstream de 800=====>1.681995
+
+
+
+Dijkstra graphstream de 850=====>2.392781
+
+
+
+Dijkstra graphstream de 900=====>2.031325
+
+
+
+Dijkstra graphstream de 950=====>2.426958
+
+
+
+Dijkstra graphstream de 1000=====>2.082271
+
+
+
+Dijkstra graphstream de 1050=====>1.593097
+
+
+
+Dijkstra graphstream de 1100=====>1.616793
+
+
+
+Dijkstra graphstream de 1150=====>1.774427
+
+
+
+Dijkstra graphstream de 1200=====>2.531553
+
+
+
+Dijkstra graphstream de 1250=====>2.438717
+
+
+
+Dijkstra graphstream de 1300=====>1.89758
+
+
+
+Dijkstra graphstream de 1350=====>2.340892
+
+
+
+Dijkstra graphstream de 1400=====>2.707362
+
+
+
+Dijkstra graphstream de 1450=====>5.283706
+
+
+
+Dijkstra graphstream de 1500=====>3.103149
+
+
+
+Dijkstra graphstream de 1550=====>2.45146
+
+
+
+Dijkstra graphstream de 1600=====>5.390312
+
+
+
+Dijkstra graphstream de 1650=====>6.020601
+
+
+
+Dijkstra graphstream de 1700=====>7.710179
+
+
+
+Dijkstra graphstream de 1750=====>6.68179
+
+
+
+Dijkstra graphstream de 1800=====>6.289352
+
+
+
+Dijkstra graphstream de 1850=====>3.476009
+
+
+
+Dijkstra graphstream de 1900=====>4.48731
+
+
+
+Dijkstra graphstream de 1950=====>3.589523
+
+
+
+Dijkstra graphstream de 2000=====>5.080426
+
+
+
+Dijkstra graphstream de 2050=====>4.185074
+
+
+
+Dijkstra graphstream de 2100=====>3.66464
+
+
+
+Dijkstra graphstream de 2150=====>4.131959
+
+NaiveDijkstra2200=====>14.139687
+
+Dijkstra graphstream de 2200=====>5.012584
+
+
+
+Dijkstra graphstream de 2250=====>5.310938
+
+
+
+Dijkstra graphstream de 2300=====>4.989948
+
+
+
+Dijkstra graphstream de 2350=====>3.057002
+
+
+
+Dijkstra graphstream de 2400=====>4.808179
+
+
+
+Dijkstra graphstream de 2450=====>4.904188
+
+
+
+Dijkstra graphstream de 2500=====>4.762471
+
+
+
+Dijkstra graphstream de 2550=====>4.649551
+
+
+
+Dijkstra graphstream de 2600=====>5.278934
+
+
+
+Dijkstra graphstream de 2650=====>4.500047
+
+
+
+Dijkstra graphstream de 2700=====>6.28625
+
+
+
+Dijkstra graphstream de 2750=====>4.704443
+
+
+
+Dijkstra graphstream de 2800=====>5.110832
+
+
+
+Dijkstra graphstream de 2850=====>5.045304
+
+
+
+Dijkstra graphstream de 2900=====>6.679813
+
+
+
+Dijkstra graphstream de 2950=====>5.742865
+
+
+
+Dijkstra graphstream de 3000=====>6.219675
+
+
+
+Dijkstra graphstream de 3050=====>6.181228
+
+
+
+Dijkstra graphstream de 3100=====>7.273523
+
+
+
+Dijkstra graphstream de 3150=====>7.055076
+
+
+
+Dijkstra graphstream de 3200=====>8.063808
+
+
+
+Dijkstra graphstream de 3250=====>13.951484
+
+
+
+Dijkstra graphstream de 3300=====>12.706629
+
+
+
+Dijkstra graphstream de 3350=====>9.964421
+
+
+
+Dijkstra graphstream de 3400=====>13.99917
+
+
+
+Dijkstra graphstream de 3450=====>12.784088
+
+
+
+Dijkstra graphstream de 3500=====>13.138945
+
+
+
+Dijkstra graphstream de 3550=====>14.145845
+
+
+
+Dijkstra graphstream de 3600=====>8.743499
+
+
+
+Dijkstra graphstream de 3650=====>8.597894
+
+
+
+Dijkstra graphstream de 3700=====>16.343188
+
+
+
+Dijkstra graphstream de 3750=====>9.235552
+
+
+
+Dijkstra graphstream de 3800=====>7.514969
+
+
+
+Dijkstra graphstream de 3850=====>13.005706
+
+
+
+Dijkstra graphstream de 3900=====>7.720288
+
+
+
+Dijkstra graphstream de 3950=====>8.126389
+
+
+
+Dijkstra graphstream de 4000=====>11.729223
+
+
+
+Dijkstra graphstream de 4050=====>7.53027
+
+
+
+Dijkstra graphstream de 4100=====>7.748234
+
+
+
+Dijkstra graphstream de 4150=====>14.261131
+
+
+
+Dijkstra graphstream de 4200=====>8.60751
+
+
+
+Dijkstra graphstream de 4250=====>14.67105
+
+
+
+Dijkstra graphstream de 4300=====>9.071752
+
+
+
+Dijkstra graphstream de 4350=====>12.281185
+
+
+
+Dijkstra graphstream de 4400=====>8.530041
+
+
+
+Dijkstra graphstream de 4450=====>14.187818
+
+
+
+Dijkstra graphstream de 4500=====>9.421257
+
+
+
+Dijkstra graphstream de 4550=====>15.665588
+
+
+
+Dijkstra graphstream de 4600=====>9.683818
+
+
+
+Dijkstra graphstream de 4650=====>17.681663
+
+
+
+Dijkstra graphstream de 4700=====>8.705378
+
+
+
+Dijkstra graphstream de 4750=====>16.432467
+
+
+
+Dijkstra graphstream de 4800=====>9.991779
+
+
+
+Dijkstra graphstream de 4850=====>16.906584
+
+
+
+Dijkstra graphstream de 4900=====>11.11833
+
+
+
+Dijkstra graphstream de 4950=====>20.358563
+
+
+
+Dijkstra graphstream de 5000=====>10.059478
+
+
+
+Dijkstra graphstream de 5050=====>17.951827
+
+
+
+Dijkstra graphstream de 5100=====>10.189639
+
+
+
+Dijkstra graphstream de 5150=====>18.83457
+
+
+
+Dijkstra graphstream de 5200=====>10.494526
+
+
+
+Dijkstra graphstream de 5250=====>18.749821
+
+
+
+Dijkstra graphstream de 5300=====>8.979716
+
+
+
+Dijkstra graphstream de 5350=====>22.694565
+
+
+
+Dijkstra graphstream de 5400=====>10.95711
+
+
+
+Dijkstra graphstream de 5450=====>15.600972
+
+
+
+Dijkstra graphstream de 5500=====>11.355118
+
+
+
+Dijkstra graphstream de 5550=====>18.939748
+
+
+
+Dijkstra graphstream de 5600=====>12.430727
+
+
+
+Dijkstra graphstream de 5650=====>14.339527
+
+
+
+Dijkstra graphstream de 5700=====>11.944894
+
+
+
+Dijkstra graphstream de 5750=====>13.702417
+
+
+
+Dijkstra graphstream de 5800=====>12.50462
+
+
+
+Dijkstra graphstream de 5850=====>13.936371
+
+
+
+Dijkstra graphstream de 5900=====>13.203562
+
+
+
+Dijkstra graphstream de 5950=====>15.967686
+
+
+
+Dijkstra graphstream de 6000=====>13.009141
+
+
+
+Dijkstra graphstream de 6050=====>12.930048
+
+
+
+Dijkstra graphstream de 6100=====>13.139461
+
+
+
+Dijkstra graphstream de 6150=====>13.350136
+
+
+
+Dijkstra graphstream de 6200=====>13.574536
+
+
+
+Dijkstra graphstream de 6250=====>13.740259
+
+
+
+Dijkstra graphstream de 6300=====>12.92739
+
+
+
+Dijkstra graphstream de 6350=====>14.212093
+
+
+
+Dijkstra graphstream de 6400=====>13.79328
+
+
+
+Dijkstra graphstream de 6450=====>14.422493
+
+
+
+Dijkstra graphstream de 6500=====>15.357189
+
+
+
+Dijkstra graphstream de 6550=====>16.60583
+
+
+
+Dijkstra graphstream de 6600=====>14.728709
+
+
+
+Dijkstra graphstream de 6650=====>14.984589
+
+
+
+Dijkstra graphstream de 6700=====>12.873996
+
+
+
+Dijkstra graphstream de 6750=====>15.130073
+
+
+
+Dijkstra graphstream de 6800=====>15.150935
+
+
+
+Dijkstra graphstream de 6850=====>15.337429
+
+
+
+Dijkstra graphstream de 6900=====>15.534496
+
+
+
+Dijkstra graphstream de 6950=====>15.573401
+
+
+
+Dijkstra graphstream de 7000=====>18.769635
+
+
+
+Dijkstra graphstream de 7050=====>11.719626
+
+
+
+Dijkstra graphstream de 7100=====>16.308668
+
+
+
+Dijkstra graphstream de 7150=====>16.314471
+
+
+
+Dijkstra graphstream de 7200=====>17.054594
+
+
+
+Dijkstra graphstream de 7250=====>22.343284
+
+
+
+Dijkstra graphstream de 7300=====>16.496915
+
+
+
+Dijkstra graphstream de 7350=====>16.845256
+
+
+
+Dijkstra graphstream de 7400=====>22.546215
+
+
+
+Dijkstra graphstream de 7450=====>26.309585
+
+
+
+Dijkstra graphstream de 7500=====>17.223228
+
+
+
+Dijkstra graphstream de 7550=====>32.27869
+
+
+
+Dijkstra graphstream de 7600=====>19.928283
+
+
+
+Dijkstra graphstream de 7650=====>26.369051
+
+
+
+Dijkstra graphstream de 7700=====>22.27292
+
+
+
+Dijkstra graphstream de 7750=====>27.971859
+
+
+
+Dijkstra graphstream de 7800=====>21.963829
+
+
+
+Dijkstra graphstream de 7850=====>25.681384
+
+
+
+Dijkstra graphstream de 7900=====>25.005202
+
+
+
+Dijkstra graphstream de 7950=====>21.425673
+
+
+
+Dijkstra graphstream de 8000=====>21.523163
+
+
+
+Dijkstra graphstream de 8050=====>21.869683
+
+
+
+Dijkstra graphstream de 8100=====>23.015155
+
+
+
+Dijkstra graphstream de 8150=====>19.65564
+
+
+
+Dijkstra graphstream de 8200=====>21.353248
+
+
+
+Dijkstra graphstream de 8250=====>16.952003
+
+
+
+Dijkstra graphstream de 8300=====>20.150474
+
+
+
+Dijkstra graphstream de 8350=====>20.514343
+
+
+
+Dijkstra graphstream de 8400=====>20.617251
+
+
+
+Dijkstra graphstream de 8450=====>20.092122
+
+
+
+Dijkstra graphstream de 8500=====>19.071042
+
+
+
+Dijkstra graphstream de 8550=====>21.064749
+
+
+
+Dijkstra graphstream de 8600=====>20.921356
+
+
+
+Dijkstra graphstream de 8650=====>21.380188
+
+
+
+Dijkstra graphstream de 8700=====>14.727013
+
+
+
+Dijkstra graphstream de 8750=====>21.959656
+
+
+
+Dijkstra graphstream de 8800=====>21.713929
+
+
+
+Dijkstra graphstream de 8850=====>22.3269
+
+
+
+Dijkstra graphstream de 8900=====>21.918036
+
+
+
+Dijkstra graphstream de 8950=====>22.467853
+
+
+
+Dijkstra graphstream de 9000=====>22.41245
+
+
+
+Dijkstra graphstream de 9050=====>23.181596
+
+
+
+Dijkstra graphstream de 9100=====>23.009994
+
+
+
+Dijkstra graphstream de 9150=====>23.118071
+
+
+
+Dijkstra graphstream de 9200=====>25.072647
+
+
+
+Dijkstra graphstream de 9250=====>23.298848
+
+
+
+Dijkstra graphstream de 9300=====>19.641831
+
+
+
+Dijkstra graphstream de 9350=====>23.765538
+
+
+
+Dijkstra graphstream de 9400=====>23.831381
+
+
+
+Dijkstra graphstream de 9450=====>25.700386
+
+
+
+Dijkstra graphstream de 9500=====>24.880079
+
+
+
+Dijkstra graphstream de 9550=====>24.263504
+
+
+
+Dijkstra graphstream de 9600=====>24.375091
+
+
+
+Dijkstra graphstream de 9650=====>25.0667
+
+
+
+Dijkstra graphstream de 9700=====>24.620788
+
+
+
+Dijkstra graphstream de 9750=====>25.018166
+
+
+
+Dijkstra graphstream de 9800=====>25.117834
+
+
+
+Dijkstra graphstream de 9850=====>25.620208
+
+
+
+Dijkstra graphstream de 9900=====>25.78335
+
+
+
+Dijkstra graphstream de 9950=====>26.189892
+
+
+
+Dijkstra graphstream de 10000=====>25.637264
+
+Process finished with exit code 0
+
