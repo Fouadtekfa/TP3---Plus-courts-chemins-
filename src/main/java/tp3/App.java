@@ -9,6 +9,9 @@ import org.graphstream.graph.implementations.SingleGraph;
 import org.omg.CORBA.SystemException;
 import org.graphstream.algorithm.*;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -138,8 +141,8 @@ public class App {
     public static void DijkstraNaive(Graph graphe, Node source) {
         // initialisation
       //  System.out.println("========Dijkstra Naive =======");
-        double  temps_execution =0;
-        double temps_debut = System.nanoTime();
+       // double  temps_execution =0;
+       // double temps_debut = System.nanoTime();
         init(graphe,source);
 
         // fille.empty() pour vérifier si la file est vide
@@ -154,21 +157,21 @@ public class App {
             }
 
         }
-        double temps_fin = System.nanoTime();
-        temps_execution=(temps_fin-temps_debut)/1000000;
-      //  System.out.printf("temps1= "+temps_execution +"ms");
+        //double temps_fin = System.nanoTime();
+        // temps_execution=(temps_fin-temps_debut)/1000000;
+      //System.out.printf("temps1= "+temps_execution +"ms");
 
     }
-    // affichage des distance entre la source les autres noeud pour tester mon coode
+    // affichage des distance entre la source les autres Noeuds
     public static void affichageDistance(Graph graph , Node source){
         System.out.print("Noeud de source " +source.getId()+"\n");
         System.out.println("========Dijkstra Naive =======");
         for (Node node : graph) {
 
             if ((int) node.getAttribute("distance") ==  Integer.MAX_VALUE) {
-                System.out.print("la distance entre  le Noeud  " + source + " et " + node + " :  ====> " + "Infinity" + "\n");
+                System.out.print("la distance la plus courte entre" + source + " et" + node + " :  ====> " + "Infinity" + "\n");
             }else {
-                System.out.print("la distance entre  le Noeud  " + source + " et " + node + " :  ====> " + node.getAttribute("distance") + "\n");
+                System.out.print("la distance la plus courte entre" + source + " et " + node + " :  ====> " + node.getAttribute("distance") + "\n");
             }
         }
     }
@@ -191,7 +194,7 @@ public class App {
         for (Node node : graph) {
           //  System.out.printf("%s->%s:%10.2f%n", Dijkstragraphstream.getSource(), node,
             //        Dijkstragraphstream.getPathLength(node));
-            System.out.printf(" Le plus court chemin entre %s et %s ==> %6.2f%n", Dijkstragraphstream.getSource(), node, Dijkstragraphstream.getPathLength(node));
+            System.out.printf(" la distance la plus courte entre %s et %s : ====> %6.2f%n", Dijkstragraphstream.getSource(), node, Dijkstragraphstream.getPathLength(node));
 
         }
        }
@@ -199,6 +202,7 @@ public class App {
         return temps_execution;
 
     }
+
     //calculer le temps d'execusion en ms de la version Naive Dijkstra
     private static double TimeNaiveDijkstra(Graph g, Node s,Boolean afficher) {
         //Instanciation
@@ -218,7 +222,23 @@ public class App {
         return temps ;
 
     }
+    public static void writeDataFile (double[] data, String fileName,int impt){
+        try {
+            String filePath = System.getProperty("user.dir") + File.separator + fileName + ".dat";
+            FileWriter fileWriter = new FileWriter(filePath);
+            StringBuilder txt = new StringBuilder();
 
+            for (int i =0; i < data.length; i += impt) {
+                txt.append(i).append(" ").append(data[i]).append("\n");
+
+            }
+            fileWriter.write(txt.toString());
+            fileWriter.close();
+            System.out.println("vous pouvez exécuter la commande gnuplot tracer.gnuplot  pour gennrer la courbe sur votre terminale  ");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void main( String[] args )
     {
@@ -232,18 +252,42 @@ public class App {
         System.out.println(" de temps d'exécution  =====>"+TimeNaiveDijkstra(graph1,graph1.getNode(0),true));
         System.out.println("========Dijkstra graphstream===============");
         System.out.println("de temps d'exécution "+ Dijkstragraphstream(graph1,graph1.getNode(0),true) +   "\n");
+        Graph graph4 = new DefaultGraph("Random");
+        //GeneratorGraph(graph4,1000,2,false,15,false);
 
+      //  double[] NaiveDijkstradegree = new double[201];
+      //  double[]  Dijkstradegree = new double[201];
+        int j =1;
+
+        while (  j <= 200 ){
+             graph4 = new DefaultGraph("Random");
+             int degre=1+j;
+            GeneratorGraph(graph4,50,j,false,15,false);
+            System.out.println(  "\n"+"temps d'exécution  de   NaiveDijkstra en fonction de degree  " +degre+"=====>"+TimeNaiveDijkstra(graph4,graph4.getNode(0),false)) ;
+            System.out.println(  "\n"+"temps   Dijkstra graphstream de en fonction de degree  " +degre+"=====>"+Dijkstragraphstream(graph4,graph4.getNode(0),false)) ;
+            //NaiveDijkstradegree[j-1] =TimeNaiveDijkstra(graph4,graph4.getNode(0),false);
+            //Dijkstradegree[j-1] = Dijkstragraphstream(graph4,graph4.getNode(0),false);
+            j=j+4;
+        }
+
+/*
+        double[] NaiveDijkstra = new double[10001];
+        double[]  Dijkstra = new double[10001];
+        Random randNode = new Random();
         int i =0;
         while (  i <= 10000 ){
 
-            Graph grapht = new SingleGraph("CPP");
+            Graph grapht = new SingleGraph("test");
             GeneratorGraph(grapht,i,10,false,15,false);
-            System.out.println(  "\n"+"NaiveDijkstra" +i+"=====>"+TimeNaiveDijkstra(grapht,grapht.getNode(0),false)) ;
-            System.out.println(  "\n"+"Dijkstra graphstream de " +i+"=====>"+Dijkstragraphstream(grapht,grapht.getNode(0),false)) ;
-
+           // System.out.println(  "\n"+"NaiveDijkstra" +i+"=====>"+TimeNaiveDijkstra(grapht,grapht.getNode(0),false)) ;
+            //System.out.println(  "\n"+"Dijkstra graphstream de " +i+"=====>"+Dijkstragraphstream(grapht,grapht.getNode(0),false)) ;
+            NaiveDijkstra[i] =TimeNaiveDijkstra(grapht,grapht.getNode(0),false);
+            Dijkstra[i] = Dijkstragraphstream(grapht,grapht.getNode(0),false);
             i=i+50;
         }
-
+        writeDataFile(NaiveDijkstra,  "NaiveDijkstra",50);
+        writeDataFile(Dijkstra, "Dijkstra",50);
+*/
         //GeneratorGraph(graph2,150,2);
         //Graph graph3 = new SingleGraph("Random");
         //GeneratorGraph(graph3,400,3);
