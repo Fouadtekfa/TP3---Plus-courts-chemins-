@@ -63,18 +63,6 @@ public class App {
 
     }
 
-    /* public static void init( Graph graphe, Node source) {
-         source.setAttribute("d", 0);
-         for (Node n : graphe) {
-             //v .dist ← ∞ mettre a la infinie
-                 n.setAttribute("distance",  Integer.MAX_VALUE);
-         }
-         //ajout de noode sde source a la fille
-         file.put(source, (int) source.getAttribute("distance"));
-         System.out.println(file.toString());
-
-     }
- */
     //dans cette parti on vas implémenter l'algorithme de Dijkstra vu en cours étape par étape
     //utiliser hashmap pour pouvoir stocker chaque node avec sa priorité
     private static  HashMap<Node, Integer> file = new HashMap<Node, Integer>();
@@ -253,43 +241,36 @@ public class App {
         System.out.println("========Dijkstra graphstream===============");
         System.out.println("de temps d'exécution "+ Dijkstragraphstream(graph1,graph1.getNode(0),true) +   "\n");
         Graph graph4 = new DefaultGraph("Random");
-        //GeneratorGraph(graph4,1000,2,false,15,false);
-
-      //  double[] NaiveDijkstradegree = new double[201];
-      //  double[]  Dijkstradegree = new double[201];
+         System.out.println("======Test du temps d'exécution de deux version  en fonction de degré ======");
         int j =1;
-
         while (  j <= 200 ){
              graph4 = new DefaultGraph("Random");
              int degre=1+j;
             GeneratorGraph(graph4,50,j,false,15,false);
-            System.out.println(  "\n"+"temps d'exécution  de   NaiveDijkstra en fonction de degree  " +degre+"=====>"+TimeNaiveDijkstra(graph4,graph4.getNode(0),false)) ;
-            System.out.println(  "\n"+"temps   Dijkstra graphstream de en fonction de degree  " +degre+"=====>"+Dijkstragraphstream(graph4,graph4.getNode(0),false)) ;
-            //NaiveDijkstradegree[j-1] =TimeNaiveDijkstra(graph4,graph4.getNode(0),false);
-            //Dijkstradegree[j-1] = Dijkstragraphstream(graph4,graph4.getNode(0),false);
+            System.out.println(  "\n"+"temps d'exécution  de   NaiveDijkstra en fonction de degree  " +degre+"=====>"+TimeNaiveDijkstra(graph4,graph4.getNode(0),false)+"ms") ;
+            System.out.println(  "\n"+"temps   Dijkstra graphstream de en fonction de degree  " +degre+"=====>"+Dijkstragraphstream(graph4,graph4.getNode(0),false)+"ms") ;
             j=j+4;
         }
 
-/*
+        System.out.println("======Test du temps d'exécution de deux version  en fonction de taille  ======");
+        System.out.println("======!!!!un instant s'il vous plait!!!!!!!!!!!!!======");
+
         double[] NaiveDijkstra = new double[10001];
         double[]  Dijkstra = new double[10001];
-        Random randNode = new Random();
         int i =0;
         while (  i <= 10000 ){
 
             Graph grapht = new SingleGraph("test");
             GeneratorGraph(grapht,i,10,false,15,false);
-           // System.out.println(  "\n"+"NaiveDijkstra" +i+"=====>"+TimeNaiveDijkstra(grapht,grapht.getNode(0),false)) ;
-            //System.out.println(  "\n"+"Dijkstra graphstream de " +i+"=====>"+Dijkstragraphstream(grapht,grapht.getNode(0),false)) ;
+           //System.out.println(  "\n"+"NaiveDijkstra" +i+"=====>"+TimeNaiveDijkstra(grapht,grapht.getNode(0),false)) ;
+            // System.out.println(  "\n"+"Dijkstra graphstream de " +i+"=====>"+Dijkstragraphstream(grapht,grapht.getNode(0),false)) ;
             NaiveDijkstra[i] =TimeNaiveDijkstra(grapht,grapht.getNode(0),false);
             Dijkstra[i] = Dijkstragraphstream(grapht,grapht.getNode(0),false);
             i=i+50;
         }
         writeDataFile(NaiveDijkstra,  "NaiveDijkstra",50);
         writeDataFile(Dijkstra, "Dijkstra",50);
-*/
-        //GeneratorGraph(graph2,150,2);
-        //Graph graph3 = new SingleGraph("Random");
-        //GeneratorGraph(graph3,400,3);
+
+
     }
 }
